@@ -40,7 +40,8 @@ class _HomePageState extends State<HomePage> {
         color: Colors.black,
     ),
     decoration: InputDecoration(
-    enabledBorder: OutlineInputBorder(
+      contentPadding: EdgeInsets.only(top: 10.0.h,left:2.w),
+      enabledBorder: OutlineInputBorder(
     borderSide: BorderSide(
     width: 1,
     color: Colors.black,
@@ -52,6 +53,7 @@ class _HomePageState extends State<HomePage> {
     width: 1, color: Colors.black),
     borderRadius: BorderRadius.circular(5),
     ),
+    prefixIcon:Icon(Icons.search,color:Colors.black,),
     hintText: 'Search',
     filled: true,
     fillColor: Colors.white,
