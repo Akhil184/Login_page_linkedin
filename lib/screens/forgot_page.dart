@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:login_page/screens/signup_page.dart';
 import '../bottom_navigation_bar.dart';
+import 'login_page.dart';
 
 class ForgotPage extends StatefulWidget {
   const ForgotPage({Key? key}) : super(key: key);
@@ -168,13 +169,21 @@ class _ForgotPageState extends State<ForgotPage> {
                             ),
                             SizedBox(height:20.h,),
                             Center(
-                            child:Text(
+                            child:TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const LoginPage()),
+                                );
+                              },
+                              child:Text(
                               'Back',
                               style: TextStyle(
                                 fontFamily: 'Gilroy',
                                 color: Colors.black,
                                 fontSize: 15.sp,
                               ),
+                            ),
                             ),
                             ),
                           ],
