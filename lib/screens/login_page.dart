@@ -16,6 +16,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   bool passwordVisible=false;
 
+
   @override
   void initState(){
     super.initState();
@@ -139,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
                                   });
                                 },
                                 child:Text(
-                                  passwordVisible==passwordVisible ? 'show':'hide', style: TextStyle(
+                                  passwordVisible ? 'show':'hide', style: TextStyle(
                                 fontFamily: 'Gilroy',
                                 color: Color(0xff0077b5 ),
                                 fontSize: 13.sp,
