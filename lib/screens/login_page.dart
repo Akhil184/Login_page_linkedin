@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:login_page/screens/forgot_page.dart';
-import 'package:login_page/screens/home_page.dart';
 import 'package:login_page/screens/signup_page.dart';
 
 import '../bottom_navigation_bar.dart';
