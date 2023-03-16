@@ -23,7 +23,12 @@ class _LoginPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(title:Text('Sign Up'),
+      appBar:AppBar(title:Text('Sign Up',style: TextStyle(
+        fontWeight:FontWeight.bold,
+        fontFamily: 'Gilroy',
+        fontSize: 20.sp,
+      ),
+      ),
         backgroundColor: Color(0xff0077b5 ),
         centerTitle:true,),
       body:Center(
