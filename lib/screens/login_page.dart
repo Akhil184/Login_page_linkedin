@@ -26,9 +26,17 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(title:Text('Login'),
-      backgroundColor: Color(0xff0077b5 ),
-      centerTitle:true,),
+      appBar:AppBar(
+        title:Text('Login',
+        style: TextStyle(
+        fontFamily: 'Gilroy',
+        color: Colors.white,
+        fontSize: 20.sp,
+    ),
+    ),
+        backgroundColor: Color(0xff0077b5 ),
+      centerTitle:true,
+      ),
     body:Center(
       child:ListView(
       children: [
@@ -72,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                           style: TextStyle(
                             fontFamily: 'Gilroy',
                             color: Colors.black,
-                            fontSize: 15.sp,
+                            fontSize: 13.sp,
                           ),
                         ),
                         SizedBox(height:20.h,),

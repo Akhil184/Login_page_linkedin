@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:like_button/like_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -80,8 +81,44 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 30.h,
                           ),
-                          Image.asset('asset/img.png')
+                          Image.asset('asset/img.png',width:500.w,),
+                          SizedBox(height:20.h,),
+                          Row(
+                            children:[
+                          LikeButton(
+                            size:20,
+                            circleColor:
+                            CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                            bubblesColor: BubblesColor(
+                              dotPrimaryColor: Color(0xff33b5e5),
+                              dotSecondaryColor: Color(0xff0099cc),
+                            ),
+                            likeBuilder: (bool isLiked) {
+                              return Icon(
+                                Icons.thumb_up_alt_outlined,
+                                color: isLiked ? Colors.deepPurpleAccent : Colors.grey,
+                                size:20,
+                              );
+                            },
+                            countBuilder: (int? count, bool isLiked, String text) {
+                              var color = isLiked ? Colors.deepPurpleAccent : Colors.grey;
+                              Widget result;
+                              if (count == 0) {
+                                result = Text(
+                                  "love",
+                                  style: TextStyle(color: color),
+                                );
+                              } else
+                                result = Text(
+                                  text,
+                                  style: TextStyle(color: color),
+                                );
+                              return result;
+                            },
+                          ),
                         ],
+                      ),
+                      ],
                       ),
                     ),
                   ],
