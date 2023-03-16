@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
             radius: 20,
             child: IconButton(
               padding: EdgeInsets.zero,
-              icon: Icon(Icons.person,color:Colors.grey,),
+              icon: Icon(Icons.person,color:Colors.grey,size:20.sp,),
               color: Colors.white,
               onPressed: () {},
             ),
