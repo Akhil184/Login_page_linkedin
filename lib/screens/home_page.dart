@@ -15,9 +15,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
+        automaticallyImplyLeading: false,
         title:Row(
           mainAxisAlignment:MainAxisAlignment.spaceBetween,
         children:[
+          CircleAvatar(
+            backgroundColor: Colors.white,
+            radius: 20,
+            child: IconButton(
+              padding: EdgeInsets.zero,
+              icon: Icon(Icons.person,color:Colors.grey,),
+              color: Colors.white,
+              onPressed: () {},
+            ),
+          ),
         Container(
         height: 40.h,
         width:200.w,
