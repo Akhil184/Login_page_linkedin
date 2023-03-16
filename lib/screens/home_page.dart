@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
         children:[
           CircleAvatar(
             backgroundColor: Colors.white,
-            radius: 20,
+            radius:15,
             child: IconButton(
               padding: EdgeInsets.zero,
               icon: Icon(Icons.person,color:Colors.grey,size:20.sp,),
