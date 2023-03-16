@@ -25,7 +25,7 @@ class _ForgotPageState extends State<ForgotPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-        title:Text('Login',
+        title:Text('Forgot Password',
           style: TextStyle(
             fontFamily: 'Gilroy',
             color: Colors.white,
@@ -62,7 +62,7 @@ class _ForgotPageState extends State<ForgotPage> {
                               height: 10.h,
                             ),
                             Text(
-                              'Sign in',
+                              'Forgot password?',
                               style: TextStyle(
                                 fontWeight:FontWeight.bold,
                                 fontFamily: 'Gilroy',
@@ -74,7 +74,7 @@ class _ForgotPageState extends State<ForgotPage> {
                               height: 10.h,
                             ),
                             Text(
-                              'stay updated on your professional world',
+                              'Reset password in two quick steps',
                               style: TextStyle(
                                 fontFamily: 'Gilroy',
                                 color: Colors.black,
@@ -112,67 +112,6 @@ class _ForgotPageState extends State<ForgotPage> {
                                     fontFamily: 'Gilroy',
                                   ),
                                 ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 30.h,
-                            ),
-                            Container(
-                              height: 50.h,
-                              child: TextField(
-                                obscureText: passwordVisible,
-                                keyboardType:TextInputType.visiblePassword,
-                                controller: _controller1,
-                                textAlign: TextAlign.start,
-                                cursorColor: Colors.black,
-                                style: const TextStyle(
-                                  color: Colors.black,
-                                ),
-                                decoration: InputDecoration(
-                                  suffix:TextButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        passwordVisible = !passwordVisible;
-                                      });
-                                    },
-                                    child:Text(
-                                      'show', style: TextStyle(
-                                      fontFamily: 'Gilroy',
-                                      color: Color(0xff0077b5 ),
-                                      fontSize: 13.sp,
-                                    ),
-                                    ),
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      width: 1,
-                                      color: Colors.black,
-                                    ),
-                                    borderRadius: BorderRadius.circular(7),
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        width: 1, color: Colors.black),
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  hintText: 'Password',
-                                  filled: true,
-                                  fillColor: Colors.white,
-                                  hintStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontFamily: 'Gilroy',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(height:10.h,),
-                            Text(
-                              'Forgot Password?',
-                              style: TextStyle(
-                                fontWeight:FontWeight.bold,
-                                fontFamily: 'Gilroy',
-                                color: Color(0xff0077b5 ),
-                                fontSize: 15.sp,
                               ),
                             ),
                             SizedBox(
@@ -217,7 +156,7 @@ class _ForgotPageState extends State<ForgotPage> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    'Sign In',
+                                    'Reset password',
                                     style: TextStyle(
                                       fontFamily: 'Gilroy',
                                       color: Colors.white,
@@ -227,6 +166,17 @@ class _ForgotPageState extends State<ForgotPage> {
                                 ),
                               ),
                             ),
+                            SizedBox(height:20.h,),
+                            Center(
+                            child:Text(
+                              'Back',
+                              style: TextStyle(
+                                fontFamily: 'Gilroy',
+                                color: Colors.black,
+                                fontSize: 15.sp,
+                              ),
+                            ),
+                            ),
                           ],
                         ),
                       ),
@@ -235,38 +185,6 @@ class _ForgotPageState extends State<ForgotPage> {
                 ),
               ),
             ),
-            SizedBox(height:20.h,),
-            Row(
-              mainAxisAlignment:MainAxisAlignment.center,
-              children: [
-                Text(
-                  'New to LinkedIn?',
-                  style: TextStyle(
-                    fontWeight:FontWeight.bold,
-                    fontFamily: 'Gilroy',
-                    color: Colors.black,
-                    fontSize: 15.sp,
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignUpPage()),
-                    );
-                  },
-                  child:Text(
-                    'Join now',
-                    style: TextStyle(
-                      fontWeight:FontWeight.bold,
-                      fontFamily: 'Gilroy',
-                      color: Color(0xff0077b5 ),
-                      fontSize: 15.sp,
-                    ),
-                  ),
-                ),
-              ],
-            )
           ],
         ),
       ),

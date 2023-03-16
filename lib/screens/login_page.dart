@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:login_page/screens/forgot_page.dart';
 import 'package:login_page/screens/home_page.dart';
 import 'package:login_page/screens/signup_page.dart';
 
@@ -168,7 +169,14 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         SizedBox(height:10.h,),
-                        Text(
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const ForgotPage()),
+                            );
+                          },
+                          child:Text(
                           'Forgot Password?',
                           style: TextStyle(
                             fontWeight:FontWeight.bold,
@@ -176,6 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                             color: Color(0xff0077b5 ),
                             fontSize: 15.sp,
                           ),
+                        ),
                         ),
                         SizedBox(
                           height: 30.h,
