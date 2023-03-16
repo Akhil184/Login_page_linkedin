@@ -20,12 +20,12 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment:MainAxisAlignment.spaceBetween,
         children:[
           CircleAvatar(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.grey,
             radius:15,
             child: IconButton(
               padding: EdgeInsets.zero,
-              icon: Icon(Icons.person,color:Colors.grey,size:20.sp,),
-              color: Colors.white,
+              icon: Icon(Icons.person,color:Colors.white,size:20.sp,),
+              color: Colors.black,
               onPressed: () {},
             ),
           ),
@@ -64,11 +64,11 @@ class _HomePageState extends State<HomePage> {
     ),
     ),
     ),
-          Icon(Icons.message,color:Colors.white),
+          Icon(Icons.message,color:Colors.black),
         ],
         ),
         centerTitle:true,
-        backgroundColor:Color(0xff0077b5 ),),
+        backgroundColor:Colors.white),
       body:ListView(
         children: [
           Expanded(
