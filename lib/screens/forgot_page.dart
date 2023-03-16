@@ -21,7 +21,7 @@ class _ForgotPageState extends State<ForgotPage> {
   }
 
   TextEditingController _controller = TextEditingController();
-  TextEditingController _controller1 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,33 +116,16 @@ class _ForgotPageState extends State<ForgotPage> {
                               ),
                             ),
                             SizedBox(
-                              height: 30.h,
+                              height: 40.h,
                             ),
                             InkWell(
                               onTap: () async {
-                                if(_controller.text.isEmpty) {
+                                if (_controller.text.isEmpty) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(
                                         content: Text('Please Enter Email')),
                                   );
                                 }
-                                else if(_controller1.text.isEmpty){
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                        content: Text('Please Enter Password')),
-                                  );
-                                }
-                                else if(_controller1.text.isEmpty && _controller.text.isEmpty){
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                        content: Text('Please Enter Email && Password')),
-                                  );
-                                }
-                                else if(_controller1.text.isNotEmpty && _controller.text.isNotEmpty)
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => const BottomNaviagtionBar()),
-                                  );
                               },
                               borderRadius: BorderRadius.circular(30.r),
                               child: Container(
@@ -167,7 +150,7 @@ class _ForgotPageState extends State<ForgotPage> {
                                 ),
                               ),
                             ),
-                            SizedBox(height:20.h,),
+                            SizedBox(height:10.h,),
                             Center(
                             child:TextButton(
                               onPressed: () {

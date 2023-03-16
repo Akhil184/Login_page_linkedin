@@ -139,7 +139,7 @@ class _LoginPageState extends State<LoginPage> {
                                   });
                                 },
                                 child:Text(
-                                  'show', style: TextStyle(
+                                  passwordVisible==passwordVisible ? 'show':'hide', style: TextStyle(
                                 fontFamily: 'Gilroy',
                                 color: Color(0xff0077b5 ),
                                 fontSize: 13.sp,
