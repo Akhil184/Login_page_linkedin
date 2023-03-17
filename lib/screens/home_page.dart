@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment:MainAxisAlignment.spaceBetween,
         children:[
           CircleAvatar(
-            backgroundColor: Colors.grey,
+            backgroundColor: Colors.black,
             radius:15,
             child: IconButton(
               padding: EdgeInsets.zero,
